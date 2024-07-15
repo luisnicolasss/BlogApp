@@ -48,7 +48,7 @@ class HomeScreenFragment : Fragment(R.layout.fragment_home_screen), HomeScreenAd
                     } else {
                         binding.emptyContainer.hide()
                     }
-                    binding.rvHome.adapter = HomeScreenAdapter(result.data)
+                    binding.rvHome.adapter = HomeScreenAdapter(result.data, this)
                 }
                 is Result.Failure -> {
                     binding.progressBar.visibility = View.GONE
